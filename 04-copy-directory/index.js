@@ -5,7 +5,7 @@ const pathToFolder = path.join(__dirname, 'files');
 const pathToCopiedFolder = path.join(__dirname, 'files-copy');
 
 function copyDir() {
-  fs.mkdir(pathToCopiedFolder, { recursive: true }, (err) => {
+  fs.mkdir(pathToCopiedFolder, { recursive: true, force: true }, (err) => {
     if (err) {
       return console.log(err);
     }
